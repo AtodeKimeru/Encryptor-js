@@ -2,3 +2,22 @@ html {
   height: 100%;
   width: 100%;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-color: gray;
+  gap: 10px;
+}
+
+.input {
+  background: #fff;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  background: aliceblue;
+}
