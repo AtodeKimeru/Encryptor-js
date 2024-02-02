@@ -3,6 +3,11 @@ html {
   width: 100%;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .content {
   display: flex;
   align-items: center;
