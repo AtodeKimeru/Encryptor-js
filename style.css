@@ -8,15 +8,6 @@ html {
   box-sizing: border-box;
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-  background-color: gray;
-  gap: 10px;
-}
-
 .input {
   background: #fff;
 }
@@ -25,4 +16,16 @@ html {
   display: flex;
   flex-direction: column;
   background: aliceblue;
+}
+
+header {
+  height: 96px;
+  width: 100%;
+  background: #f3f5fc;
+  padding-bottom: 110px;
+}
+
+#logo {
+  height: 100%;
+  object-fit: cover;
 }
