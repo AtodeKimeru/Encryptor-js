@@ -1,15 +1,9 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-
 * {
-  margin: 0;
-  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.input {
-  background: #fff;
+body {
+  background: #f3f5fc;
 }
 
 .output {
@@ -20,17 +14,28 @@ html {
 
 header {
   height: 96px;
-  width: 100%;
-  background: #f3f5fc;
-  padding-bottom: 110px;
+  width: 50%;
 }
 
 #logo {
-  height: 100%;
   object-fit: cover;
 }
 
 span {
   display: block;
   color: darkgray;
+}
+
+.input textarea{
+  background-color: #f3f5fc;;
+  border-color: #f3f5fc;
+  width: 88%;
+  height: 350px;
+  margin: 64px 6%;
+  font-size: 32px;
+  color: darkblue;
+} 
+
+.input textarea::placeholder {
+  color: darkblue;
 }
