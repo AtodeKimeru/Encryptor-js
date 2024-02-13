@@ -1,5 +1,6 @@
 * {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,9 +8,11 @@ body {
 }
 
 .output {
-  display: flex;
-  flex-direction: column;
-  background: aliceblue;
+  background: white;
+  width: 84%;
+  padding: 64px;
+  margin: 10px auto;
+  border-radius: 32px;
 }
 
 header {
@@ -26,14 +29,21 @@ span {
   color: darkgray;
 }
 
-.input textarea{
-  background-color: #f3f5fc;;
-  border-color: #f3f5fc;
-  width: 88%;
-  height: 350px;
-  margin: 64px 6%;
-  font-size: 32px;
+.input {
+  width: 84%;
+  margin: 48px auto;
+}
+
+.text-input{
+  background-color: #f3f5fc;
   color: darkblue;
+  font-size: 32px;
+  border: 0 solid #f3f5fc;
+  margin-bottom: 64px;
+  width: 96%;
+  height: 200px;
+  resize: vertical;
+  
 } 
 
 .input textarea::placeholder {
