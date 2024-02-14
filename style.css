@@ -102,16 +102,35 @@ footer {
 
 @media (min-width: 768px) {
   button {
-    width: 48%;
+    width: 44%;
   }
 }
 
-@media (max-width: 1040px) {
-  input {
-    width: 84%;
-  }
-  
+@media (max-width: 1039px) {
   .output img{
     display: none;
+  }
+}
+
+@media (min-width: 1040px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input {
+    flex: 0 0 60%;
+    margin-left: 48px;
+  }
+
+  .output {
+    flex: 1;
+    margin-right: 40px;
+  }
+
+  .output img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 60px;
   }
 }
