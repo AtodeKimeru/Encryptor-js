@@ -24,6 +24,10 @@ header {
   object-fit: cover;
 }
 
+main {
+  margin-bottom: 74px;
+}
+
 span {
   display: block;
   margin: 12px 0;
@@ -91,11 +95,14 @@ button {
 }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background: var(--my-gray);
   color: white;
   font-size: 12px;
   text-align: center;
-  margin: 20px 0px 0px;
   padding: 20px;
   border: 0 solid var(--my-gray);
 }
