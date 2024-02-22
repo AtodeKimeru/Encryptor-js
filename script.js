@@ -11,7 +11,7 @@ function encrypt(text) {
   for (let i = 0; i < text.length; i++){
   
     let letter = text[i]
-    let consonant = 0;
+    let consonant = 0; // it's 0 when letter is not a vowel
     
     if (letter == "e"){
       ans = ans.concat("enter");
@@ -81,5 +81,35 @@ function decrypt(text) {
 }
 
 
+function validator_input(text) {
+  let messages_error = [];
+  let errors = 0;
+  
+  if (text.search(/[A-Z]/) != -1){
+    messages_error.push("El texto debe contener solo minúsculas.");
+    errors++;
+  }
+  if (text.search(/[^a-zA-Z0-9\s]/) != -1){
+    messages_error.push("No deben ser utilizados letras con acentos ni caracteres especiales.");
+    errors++;
+  }
+
+  if (errors >= 1){
+    if (errors == 2){
+      alert("Errors:\n" + messages_error[0] + "\n" + messages_error[1]);
+    } else {alert("Error: " + messages_error[0]);}
+    return false
+  }
+  return true;
+}
+
+
+function run() {}
+
+
 console.log(encrypt("Murcielago"));
 console.log(decrypt("Mufatrcimesenterlaigober"));
+console.log(validator_input("Murcielago"));
+console.log(validator_input("murcíelago"));
+console.log(validator_input("Murcíelago"));
+run();
