@@ -65,7 +65,7 @@ function decrypt(text) {
     }
     if (text.search("ai") != -1){      
       ans = ans.replace("ai", "a");
-      text_length --;
+      text_length--;
     }
     if (text.search("ober") != -1){      
       ans = ans.replace("ober", "o");
@@ -105,26 +105,25 @@ function validator_input(text) {
 
 
 function encrypt_button(){
-  let text = document.querySelector(".text-input");
-  console.log("click")
+  let text = document.querySelector(".text-input").value;
   if (validator_input(text)){
-    documentgetElementById("text-output").value = encrypt(text);
+    console.log(text)
+    document.getElementById("text-output").innerHTML = encrypt(text);
   }
 }
 
 
 function decrypt_button(){
-  let text = document.querySelector(".text-input");
-  console.log("click")
+  let text = document.querySelector(".text-input").value;
   if (validator_input(text)){
-    documentgetElementById("text-output").value = decrypt(text);
+    console.log(text.legth)
+    console.log(decrypt(text))
+    document.getElementById("text-output").innerHTML = decrypt(text);
   }
 }
 
 /*
 console.log(encrypt("Murcielago"));
-console.log(decrypt("Mufatrcimesenterlaigober"));
-console.log(validator_input("Murcielago"));
-console.log(validator_input("murcíelago"));
-console.log(validator_input("Murcíelago"));
 */
+console.log(decrypt("Mufatrcimesenterlaigober"));
+
