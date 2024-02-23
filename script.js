@@ -104,12 +104,27 @@ function validator_input(text) {
 }
 
 
-function run() {}
+function encrypt_button(){
+  let text = document.querySelector(".text-input");
+  console.log("click")
+  if (validator_input(text)){
+    documentgetElementById("text-output").value = encrypt(text);
+  }
+}
 
 
+function decrypt_button(){
+  let text = document.querySelector(".text-input");
+  console.log("click")
+  if (validator_input(text)){
+    documentgetElementById("text-output").value = decrypt(text);
+  }
+}
+
+/*
 console.log(encrypt("Murcielago"));
 console.log(decrypt("Mufatrcimesenterlaigober"));
 console.log(validator_input("Murcielago"));
 console.log(validator_input("murcíelago"));
 console.log(validator_input("Murcíelago"));
-run();
+*/
