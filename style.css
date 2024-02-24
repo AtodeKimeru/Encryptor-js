@@ -13,19 +13,17 @@ body {
   background: var(--back-color);
 }
 
-header {
+main {
+  margin-bottom: 74px;
+}
+
+.logo-box {
   height: 96px;
   width: 132px;
-  text-align: center;
-  padding-top: 36px;
 }
 
 #logo {
   object-fit: cover;
-}
-
-main {
-  margin-bottom: 74px;
 }
 
 span {
@@ -35,7 +33,7 @@ span {
   font-size: 16px;
 }
 
-.input {
+.content {
   width: 84%;
   margin: 48px auto;
 }
@@ -125,7 +123,7 @@ footer {
     justify-content: space-between;
   }
 
-  .input {
+  .content {
     flex: 0 0 60%;
     margin-left: 48px;
   }

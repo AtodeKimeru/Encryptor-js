@@ -50,13 +50,13 @@ function decrypt(text) {
   La letra "ober" es convertida para "o"
   La letra "u" es convertida para "u"
   */
-  let ans = "";
+  let ans = text;
   let text_length = text.length;
   
   for (let i = 0; i < text_length; i++){
     
     if (text.search("enter") != -1){      
-      ans = text.replace("enter", "e");
+      ans = ans.replace("enter", "e");
       text_length -= 4;
     }
     if (text.search("imes") != -1){      
@@ -100,8 +100,15 @@ function validator_input(text) {
     } else {alert("Error: " + messages_error[0]);}
     return false
   }
+
+  if (!text) {
+    return false 
+  }
   return true;
 }
+
+
+function clear_box() {}
 
 
 function encrypt_button(){
@@ -124,6 +131,5 @@ function decrypt_button(){
 
 /*
 console.log(encrypt("Murcielago"));
-*/
 console.log(decrypt("Mufatrcimesenterlaigober"));
-
+*/
