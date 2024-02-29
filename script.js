@@ -108,7 +108,18 @@ function validator_input(text) {
 }
 
 
-function clear_box() {}
+function clear_box() {
+  let title = document.querySelector(".output h3").style;
+  let img = document.querySelector(".output img").style;
+  title.display = "none";
+  img.display = "none";
+  let box = document.querySelector(".output").style;
+  let text_output = document.querySelector(".output p").style;
+  box.display = "flex";
+  box.alignItems = "center";
+  box.justifyContent = "center";
+  text_output.fontSize = "24px";
+}
 
 
 function encrypt_button(){
@@ -116,6 +127,7 @@ function encrypt_button(){
   if (validator_input(text)){
     console.log(text)
     document.getElementById("text-output").innerHTML = encrypt(text);
+    clear_box();
   }
 }
 
@@ -126,6 +138,7 @@ function decrypt_button(){
     console.log(text.legth)
     console.log(decrypt(text))
     document.getElementById("text-output").innerHTML = decrypt(text);
+    clear_box();
   }
 }
 
