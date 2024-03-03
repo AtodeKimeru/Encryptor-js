@@ -122,8 +122,14 @@ function clear_box() {
 }
 
 
+function no_text(text) {
+  if (text == ""){location.reload();}
+}
+
+
 function encrypt_button(){
   let text = document.querySelector(".text-input").value;
+  no_text(text);
   if (validator_input(text)){
     console.log(text)
     document.getElementById("text-output").innerHTML = encrypt(text);
@@ -134,6 +140,7 @@ function encrypt_button(){
 
 function decrypt_button(){
   let text = document.querySelector(".text-input").value;
+  no_text(text);
   if (validator_input(text)){
     console.log(text.legth)
     console.log(decrypt(text))
