@@ -123,7 +123,9 @@ function clear_box() {
 
 
 function no_text(text) {
-  if (text == ""){location.reload();}
+  if (/^\s*$/.test(text)){
+    location.reload();
+  }  
 }
 
 
@@ -131,7 +133,7 @@ function encrypt_button(){
   let text = document.querySelector(".text-input").value;
   no_text(text);
   if (validator_input(text)){
-    console.log(text)
+    console.log(text);
     document.getElementById("text-output").innerHTML = encrypt(text);
     clear_box();
   }
@@ -142,8 +144,8 @@ function decrypt_button(){
   let text = document.querySelector(".text-input").value;
   no_text(text);
   if (validator_input(text)){
-    console.log(text.legth)
-    console.log(decrypt(text))
+    console.log(text.legth);
+    console.log(decrypt(text));
     document.getElementById("text-output").innerHTML = decrypt(text);
     clear_box();
   }
