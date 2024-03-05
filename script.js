@@ -115,9 +115,9 @@ function clear_box() {
   img.display = "none";
   let box = document.querySelector(".output").style;
   let text_output = document.querySelector(".output p").style;
-  box.display = "flex";
+  /*box.display = "flex";
   box.alignItems = "center";
-  box.justifyContent = "center";
+  box.justifyContent = "center";*/
   text_output.fontSize = "24px";
 }
 
