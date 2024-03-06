@@ -119,6 +119,8 @@ function clear_box() {
   box.alignItems = "center";
   box.justifyContent = "center";*/
   text_output.fontSize = "24px";
+  // button to copy
+  document.querySelector(".copy").style.display = "inline-block";
 }
 
 
@@ -133,7 +135,6 @@ function encrypt_button(){
   let text = document.querySelector(".text-input").value;
   no_text(text);
   if (validator_input(text)){
-    console.log(text);
     document.getElementById("text-output").innerHTML = encrypt(text);
     clear_box();
   }
@@ -144,8 +145,6 @@ function decrypt_button(){
   let text = document.querySelector(".text-input").value;
   no_text(text);
   if (validator_input(text)){
-    console.log(text.legth);
-    console.log(decrypt(text));
     document.getElementById("text-output").innerHTML = decrypt(text);
     clear_box();
   }

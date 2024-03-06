@@ -93,6 +93,10 @@ button {
   font-weight: 300;
 }
 
+.copy {
+  display: none;
+}
+
 footer {
   position: fixed;
   left: 0;
