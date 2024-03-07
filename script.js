@@ -110,17 +110,20 @@ function validator_input(text) {
 
 function clear_box() {
   let title = document.querySelector(".output h3").style;
-  let img = document.querySelector(".output img").style;
   title.display = "none";
+  let img = document.querySelector(".output img").style;
   img.display = "none";
-  let box = document.querySelector(".output").style;
   let text_output = document.querySelector(".output p").style;
-  /*box.display = "flex";
+  text_output.margin = "0 0 92px";
+  text_output.fontSize = "24px";
+  /*let box = document.querySelector(".output").style;
+  box.display = "flex";
   box.alignItems = "center";
   box.justifyContent = "center";*/
-  text_output.fontSize = "24px";
   // button to copy
-  document.querySelector(".copy").style.display = "inline-block";
+  let copy = document.querySelector(".copy").style;
+  copy.display = "inline-block";
+  copy.position = "absolute";
 }
 
 
