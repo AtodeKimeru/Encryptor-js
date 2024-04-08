@@ -153,6 +153,21 @@ function decrypt_button(){
   }
 }
 
+
+function copy_text() {
+  let text = document.querySelector(".output p").innerHTML;
+  const copy = async () => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log("Contenido copiado al portapapeles");
+    alert("Copiado al portapapeles"); 
+    } catch (err) {
+    console.error("Error al copiar: ", err);
+    alert("algo salió mal");
+    }
+  } 
+  copy();
+}
 /*
 console.log(encrypt("Murcielago"));
 console.log(decrypt("Mufatrcimesenterlaigober"));
